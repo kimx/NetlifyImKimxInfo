@@ -1,14 +1,63 @@
 <!doctype html>
-<html lang="zh-CN">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090d13"><title>幻光典藏 · 交互卡牌</title><link rel="stylesheet" href="./style.css"><script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script></head>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07111b">
+  <meta name="description" content="從現場實作到 .NET 架構：Kim Hsu 的技術實作、系統經驗與最新文章。">
+  <title>Kim Hsu｜.NET 開發者與系統架構實作者</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script>
+</head>
 <body>
-<header><a class="brand" href="./" aria-label="幻光典藏首页"><span class="seal">幻</span><span>幻光典藏<small>HOLOGRAPHIC ATELIER</small></span></a><span class="edition">COLLECTION 01 <i></i> UKIYO-E</span><button id="soundless" class="top-note" type="button">关于这张卡 ↗</button></header>
-<main>
-<section class="story"><p class="eyebrow"><span></span><span id="collection">个人全息典藏</span></p><p id="subtitle" class="subheading">角色称号</p><h1 id="card-title">角色名称</h1><p id="description" class="description">收藏属于你的光影。</p><div class="rule"></div><p id="tagline" class="technique-label">招式说明</p><h2 id="technique">招式名称</h2><p class="craft">色彩、光泽与流动的虹彩。<br>轻转卡面，收藏每一个不同的瞬间。</p><div class="actions"><button id="auto" class="primary" type="button" aria-pressed="false"><span>▷</span> 自动赏卡</button><button id="flip" type="button">翻看背面 <span>↻</span></button></div><div class="collectible"><span>✧</span><div>独立分层 · 实时镭射<small id="edition">001 / 006 · DIGITAL COLLECTIBLE</small></div></div></section>
-<section class="display" aria-label="交互式全息卡牌"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><span class="display-label">A MOMENT IN THE LIGHT</span><div id="stage" tabindex="0" role="img" aria-label="可交互三维卡牌。拖动旋转，方向键微调，F 翻面，R 复位。"><div id="loading" role="status">正在加载卡牌…</div></div><div class="stage-hint"><span>↔</span> 拖动转卡 <b>·</b> 滚轮缩放 <button id="reset" type="button" aria-label="恢复默认视角">复位 ↺</button></div><p id="view-label" class="view-label">FRONT · 正面</p></section>
-</main>
-<section class="controls" aria-label="卡牌效果控制"><div class="control-heading"><span>光影调校</span><small>MAKE IT YOURS</small></div><label>镭射强度 <output id="foil-value">65%</output><input id="foil" type="range" min="0" max="1.2" step="0.01" value="0.65"></label><label>主体缩放 <output id="scale-value">1.25</output><input id="scale" type="range" min="1" max="1.7" step="0.01" value="1.25"></label><label>主体深度 <output id="depth-value">0.40</output><input id="depth" type="range" min="0" max="0.8" step="0.01" value="0.4"></label><label>背景深度 <output id="bg-depth-value">−0.25</output><input id="bg-depth" type="range" min="-0.65" max="0" step="0.01" value="-0.25"></label><button id="save" class="save" type="button">保存此刻 ↗</button></section>
-<footer><span>光随手动，画有余深。</span><span>DESIGNED TO BE SEEN IN MOTION</span><button id="details" type="button">藏品档案 ＋</button></footer>
-<dialog id="about"><button class="close" type="button" aria-label="关闭">×</button><p class="eyebrow">COLLECTIBLE NOTES</p><h2>一张卡，不止一个角度。</h2><p>卡牌模型从 Blender 导出。主体、文字、背景和线描分别参与实时合成，让光泽和景深随视角变化。</p><p>拖动或方向键转动；F 翻面；R 复位。滑杆调整只影响当前预览，刷新后恢复默认值。</p><p class="fine">网页使用实时材质重建镭射效果，与 Blender 离线渲染会有细节差异。</p></dialog>
-<script type="module" src="./app.js"></script>
-</body></html>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Kim Hsu 首頁"><b>K/</b><span>KIM HSU<small>DEVELOPER · BUILDER · EXPLORER</small></span></a>
+    <nav aria-label="主要導覽"><a href="#notes">NOTES</a><a href="#story">STORY</a><a href="#journey">JOURNEY</a><a href="#contact">CONTACT</a></nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section-shell" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span><span id="collection">KIM HSU · FIELD BUILDER</span></p>
+        <p id="subtitle" class="hero-kicker">.NET 系統架構實作者</p>
+        <h1 id="card-title">把複雜的系統，<em>做成可靠的日常。</em></h1>
+        <p id="description" class="hero-intro">我是 Kim，來自高雄。從現場實作到 .NET 架構，二十多年持續動手、學習與分享。</p>
+        <div class="hero-actions"><a class="button button-primary" href="#notes">閱讀最新文章 <span>↗</span></a><a class="button button-secondary" href="#story">認識我的旅程 <span>↓</span></a></div>
+        <dl class="profile-facts" aria-label="個人概況"><div><dt>目前任職</dt><dd>矽聯科技</dd></div><div><dt>專業領域</dt><dd>.NET / AI / ERP</dd></div><div><dt>所在地</dt><dd>Kaohsiung, Taiwan</dd></div></dl>
+      </div>
+      <div class="hero-card-wrap">
+        <div class="card-caption"><span>LIVE PROFILE / 01</span><button id="soundless" type="button">卡片說明 ↗</button></div>
+        <section class="card-display" aria-label="Kim Hsu 互動全息卡片">
+          <div id="stage" tabindex="0" role="img" aria-label="可互動三維全息卡。拖動旋轉，方向鍵微調，F 翻面，R 復位。"><div id="loading" role="status">正在載入卡片…</div></div>
+          <p id="view-label" class="view-label">FRONT · 正面</p>
+        </section>
+        <div class="card-tools"><button id="auto" class="tool-primary" type="button" aria-pressed="false"><span>▷</span> 自動賞卡</button><button id="flip" type="button">翻看背面 <span>↻</span></button><button id="reset" type="button" aria-label="恢復預設視角">復位 ↺</button></div>
+        <p class="card-hint">拖動轉卡　·　滾輪縮放　·　全息效果只是介紹的一部分</p>
+      </div>
+    </section>
+
+    <section class="notes section-shell" id="notes">
+      <div class="section-heading"><p class="eyebrow">01 / FIELD NOTES</p><h2>最近寫下的技術實作</h2><a href="https://note.kimx.info/" target="_blank" rel="noreferrer">查看全部文章 ↗</a></div>
+      <article class="featured-note"><a href="https://note.kimx.info/2026/08/codex-sparkgithub-copilot-sol-nexaforge.html" target="_blank" rel="noreferrer"><div><span>FEATURED / LATEST NOTE</span><time>2026年8月23日</time></div><h3>從 Codex Spark、GitHub Copilot 到 Sol：一時興起做出了 NexaForge</h3><p>最近看到 Codex 5.3 Spark 是使用獨立配額，一時興起，突然想到一件之前一直想做、但始終沒有真的動手的事情：做一個自己的線上工具網站。</p><span class="article-arrow">↗</span></a></article>
+      <div class="article-list"><a href="https://note.kimx.info/2026/07/gitnexus-codex-call-chain-impact.html" target="_blank" rel="noreferrer"><b>02</b><span><small>ai · codex</small>GitNexus：讓 Codex 修改程式前先理解 Call Chain 與 Impact Analysis</span><time>2026年7月3日</time><i>↗</i></a><a href="https://note.kimx.info/2026/04/azure-static-web-apps-api.html" target="_blank" rel="noreferrer"><b>03</b><span><small>Azure · blazor</small>Azure Static Web Apps 搭配後端 API 的實作心得</span><time>2026年4月2日</time><i>↗</i></a></div>
+    </section>
+
+    <section class="story section-shell" id="story"><div class="story-heading"><p class="eyebrow">02 / MY STORY</p><h2>從現場實作，<br>到軟體系統。</h2><p>MATERIAL → LOGIC → SYSTEM</p></div><div class="story-copy"><p>我最早的工作現場不是辦公室，而是門窗的設計、製作與安裝。後來走進軟體開發，工具改變了，但解決問題的方法沒有變。</p><blockquote>Learning is like sailing against the current — not to advance is to drop back.</blockquote><ol><li>觀察現場</li><li>拆解問題</li><li>動手製作</li><li>驗證改善</li></ol></div></section>
+
+    <section class="capabilities section-shell"><div class="section-heading wide"><p class="eyebrow">03 / CAPABILITIES</p><h2>把技術變成可持續的系統</h2><p>從核心架構到交付維運，讓複雜度有秩序地被承接。</p></div><div class="capability-grid"><article><b>01</b><h3>C# / .NET</h3><p>企業級 Web 系統、底層架構與長期維護。</p></article><article><b>02</b><h3>ERP 系統架構</h3><p>核心架構、整合設計、效能調校與問題排除。</p></article><article><b>03</b><h3>Web &amp; API</h3><p>從前後端協作到雲端部署，建立可持續演進的服務。</p></article><article><b>04</b><h3>Database &amp; DevOps</h3><p>資料設計、交付流程、自動化與營運可維護性。</p></article></div></section>
+
+    <section class="journey section-shell" id="journey"><div class="section-heading"><p class="eyebrow">04 / JOURNEY</p><h2>一路做，一路學。</h2><p>每段經驗都留下可以帶往下一個系統的判斷與方法。</p></div><ol class="timeline"><li class="current"><time>2026 — Present</time><div><small>NOW</small><h3>研究開發</h3><strong>矽聯科技</strong><p>以 AI 驅動開發，結合 .NET 與企業系統經驗，提升開發效率與軟體品質。</p></div></li><li><time>2021 — 2026</time><div><small>02</small><h3>研究開發</h3><strong>MetaAge</strong><p>南非 ERP 系統底層架構、設計開發、維護、問題排除與效能調校。</p></div></li><li><time>2015 — 2021</time><div><small>03</small><h3>研究開發</h3><strong>志凱科技</strong><p>南非 ERP 系統底層架構、設計開發、維護與效能調校。</p></div></li><li><time>2014 — 2015</time><div><small>04</small><h3>程式開發</h3><strong>台非實業</strong><p>庫存系統開發。</p></div></li><li><time>2012 — 2014</time><div><small>05</small><h3>程式開發</h3><strong>日月光</strong><p>製程相關系統開發。</p></div></li><li><time>2006 — 2011</time><div><small>06</small><h3>程式開發</h3><strong>矽聯科技</strong><p>專案系統開發。</p></div></li><li><time>1997 — 2005</time><div><small>07</small><h3>門窗設計、製作與安裝</h3><strong>仕偉鋁門窗</strong><p>門窗設計、製作、安裝與氬銲；建立從現場觀察到精準交付的工藝基礎。</p></div></li></ol><div class="education"><article><span>2003 — 2007</span><h3>和春技術學院・資訊管理系</h3><p>程式設計、系統設計。</p></article><article><span>1997 — 1999</span><h3>國際商工・資訊管理</h3><p>電子、通訊與資訊管理。</p></article></div></section>
+
+    <section class="work section-shell"><div class="section-heading wide"><p class="eyebrow">05 / SELECTED WORK</p><h2>系統、整合與長期維運</h2><p>跨越 ERP、製程、知識管理與企業流程的實作索引。</p></div><ul class="project-grid"><li><b>01</b>南非 ERP 系統</li><li><b>02</b>螺絲公會會務系統</li><li><b>03</b>PMC TAMIvas B2B 交易平台</li><li><b>04</b>明安國際電子簽核（整合 SAP）</li><li><b>05</b>明安國際 Service Desk</li><li><b>06</b>明安國際 KM 系統</li><li><b>07</b>環保署油氣雙燃料車補助管理系統</li><li><b>08</b>SPC 統計製程管制</li><li><b>09</b>EAD 機台檔案傳輸</li><li><b>10</b>FMEA 失敗模式與影響分析系統</li></ul><aside class="credentials"><h3>Credentials</h3><ul><li>Microsoft® Certified Professional Developer</li><li>Microsoft® Certified Technology Specialist</li><li>Google 在地嚮導 Level 9</li></ul></aside></section>
+
+    <section class="contact section-shell" id="contact"><p class="eyebrow">06 / KEEP IN TOUCH</p><h2>從一篇文章，<br>開始認識彼此。</h2><p>有合作構想、系統難題，或只是想聊聊技術，歡迎來信。</p><a class="email-link" href="mailto:im@kimx.info">im@kimx.info <span>↗</span></a><div class="contact-links"><a href="https://note.kimx.info/" target="_blank" rel="noreferrer">技術 Blog ↗</a><a href="https://life.kimx.info/" target="_blank" rel="noreferrer">生活 Blog ↗</a><a href="https://www.linkedin.com/in/kimxinfo/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/kimxinfo/" target="_blank" rel="noreferrer">Instagram ↗</a></div></section>
+  </main>
+  <footer class="site-footer"><span>© 2026 KIM HSU / KAOHSIUNG</span><span>THE CARD IS AN EFFECT, THE WORK IS THE STORY.</span><a href="#top">Back to top ↑</a></footer>
+
+  <section class="card-controls" aria-label="全息卡效果控制"><label>FOIL <output id="foil-value">72%</output><input id="foil" type="range" min="0" max="1.2" step="0.01" value="0.72"></label><label>SCALE <output id="scale-value">1.25</output><input id="scale" type="range" min="1" max="1.7" step="0.01" value="1.25"></label><label>DEPTH <output id="depth-value">0.40</output><input id="depth" type="range" min="0" max="0.8" step="0.01" value="0.4"></label><label>BACKGROUND <output id="bg-depth-value">−0.25</output><input id="bg-depth" type="range" min="-0.65" max="0" step="0.01" value="-0.25"></label><button id="save" type="button">保存此刻 ↗</button></section>
+  <dialog id="about"><button class="close" type="button" aria-label="關閉">×</button><p class="eyebrow">ABOUT THE EFFECT</p><h2>卡片是效果，作品才是主體。</h2><p>這張互動全息卡把 Kim 的形象、工程線稿與技術語彙做成一個可以旋轉的視覺入口；網站真正要介紹的，是從現場實作一路走到 .NET、AI 與企業系統的經驗。</p><p>拖動卡面或使用方向鍵轉動；F 翻面；R 復位。滑桿只調整卡片效果，不改變個人介紹內容。</p></dialog>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
