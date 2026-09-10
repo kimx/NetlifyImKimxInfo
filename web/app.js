@@ -1,9 +1,9 @@
-import * as THREE from 'three';
-import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
-import {EffectComposer} from 'three/addons/postprocessing/EffectComposer.js';
-import {RenderPass} from 'three/addons/postprocessing/RenderPass.js';
-import {UnrealBloomPass} from 'three/addons/postprocessing/UnrealBloomPass.js';
-import {OutputPass} from 'three/addons/postprocessing/OutputPass.js';
+import * as THREE from './assets/three/build/three.module.js';
+import {GLTFLoader} from './assets/three/examples/jsm/loaders/GLTFLoader.js';
+import {EffectComposer} from './assets/three/examples/jsm/postprocessing/EffectComposer.js';
+import {RenderPass} from './assets/three/examples/jsm/postprocessing/RenderPass.js';
+import {UnrealBloomPass} from './assets/three/examples/jsm/postprocessing/UnrealBloomPass.js';
+import {OutputPass} from './assets/three/examples/jsm/postprocessing/OutputPass.js';
 
 const stage=document.querySelector('#stage'), loading=document.querySelector('#loading');
 const $=id=>document.getElementById(id);
