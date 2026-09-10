@@ -1,0 +1,27 @@
+{
+  "title": "Kim Hsu",
+  "subtitle": ".NET 系統架構實作者",
+  "technique": "RELIABLE SYSTEMS",
+  "tagline": "把複雜的系統，做成可靠的日常。",
+  "edition": "001 / 001",
+  "collection": "KIM HSU · FIELD BUILDER",
+  "description": "從現場實作到 .NET 架構，二十多年持續動手、學習與分享。",
+  "font": "C:/Windows/Fonts/NotoSansTC-VF.ttf",
+  "assets": {
+    "model": "./assets/card.glb",
+    "subject": "./assets/subject.png",
+    "background": "./assets/background.png",
+    "text": "./assets/text.png",
+    "lineart": "./assets/lineart.png"
+  },
+  "parameters": {
+    "subjectScale": 1.25,
+    "subjectDepth": 0.4,
+    "backgroundDepth": -0.25,
+    "foil": 0.72
+  },
+  "safeArea": {
+    "scale": 1.12,
+    "offset": [-0.06, -0.085]
+  }
+}

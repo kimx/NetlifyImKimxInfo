@@ -1,0 +1,14 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/NetlifyImKimxInfo/CopilotIndices/18.5.39187.10602
+/.vs/NetlifyImKimxInfo.slnx/FileContentIndex/ef93061f-948c-447e-906a-8b1941456f45.vsidx
+*.vsidx
+/.vs/slnx.sqlite
+*.sqlite-journal
+
+# Holo Card Studio local tooling and generated preview dependencies
+/tools/
+/web/node_modules/
+/_next/
